@@ -1,129 +1,153 @@
-
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background-color: #FFF4EB;
+    color: #3E2723;
     margin: 0;
     padding: 0;
-    background-color: #F8E8DD;
-    color: #333;
-}
-
-header {
-    background-color: #FFAF87;
-    padding: 20px;
-    text-align: center;
-    color: white;
-    font-size: 24px;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
 }
 
 
-#menu {
-    padding: 20px;
-    text-align: center;
-}
-
-.menu-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.menu-item {
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    margin: 15px;
-    width: 200px;
-    text-align: center;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.menu-item img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-button.add-to-cart {
-    background-color: #FF5722;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-    margin-top: 10px;
-}
-
-
-.category-btn {
-    background-color: #FFAF87;
-    border: none;
-    padding: 10px 15px;
-    margin: 5px;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-
-#carrito {
-    padding: 20px;
-    text-align: center;
-}
-
-#cart-items {
-    list-style-type: none;
-    padding: 0;
-}
-
-#vaciar-carrito {
-    background-color: #D32F2F;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-
-#reservas {
-    text-align: center;
-    padding: 20px;
-}
-
-#reservas form {
+.sidebar {
+    width: 80px;
+    height: 100vh;
+    background-color: #F9A872;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    padding: 20px 0;
 }
 
-#reservas input, #reservas button {
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+.sidebar a.active {
+    background-color: #FF7043;
     padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    width: 80%;
-    max-width: 300px;
+    border-radius: 10px;
 }
 
-#reservas button {
-    background-color: #4CAF50;
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.menu-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #D84315;
+}
+
+
+.categories {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.category-btn {
+    background-color: #F9A872;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
     color: white;
     cursor: pointer;
+    font-size: 16px;
+}
+
+.category-btn:hover {
+    background-color: #FF7043;
+}
+
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.menu-item {
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.menu-item h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.menu-item span {
+    font-size: 16px;
+    color: #D84315;
+    font-weight: bold;
+}
+
+.menu-item button {
+    margin-top: 10px;
+    background-color: #F9A872;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.menu-item button:hover {
+    background-color: #FF7043;
+}
+
+
+.cart-container {
+    width: 300px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.cart-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.cart-item p {
+    font-size: 14px;
+}
+
+.checkout-btn {
+    background-color: #FF7043;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.checkout-btn:hover {
+    background-color: #E64A19;
 }

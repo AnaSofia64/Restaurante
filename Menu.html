@@ -7,27 +7,25 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
     <header>
         <h1>Nombre del Restaurante</h1>
         <nav>
             <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#menu">Menú</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="menu.html">Menú</a></li>
+                <li><a href="cart.html">Carrito</a></li>
+                <li><a href="#reservas">Reservas</a></li>
             </ul>
         </nav>
     </header>
-
-   
-    <section id="inicio">
-        <h2>Bienvenidos a nuestro restaurante</h2>
-        <p>Descubre nuestra deliciosa selección de platillos.</p>
-    </section>
-
     
     <section id="menu">
         <h2>Nuestro Menú</h2>
+        <nav>
+            <button class="category-btn">Entradas</button>
+            <button class="category-btn">Platos Fuertes</button>
+            <button class="category-btn">Postres</button>
+            <button class="category-btn">Bebidas</button>
+        </nav>
         <div class="menu-container">
             <div class="menu-item">
                 <img src="img/plato1.jpg" alt="Plato 1">
@@ -36,32 +34,23 @@
                 <span>$10.00</span>
                 <button class="add-to-cart">Añadir al carrito</button>
             </div>
-
-            <div class="menu-item">
-                <img src="img/plato2.jpg" alt="Plato 2">
-                <h3>Plato 2</h3>
-                <p>Descripción del plato.</p>
-                <span>$12.00</span>
-                <button class="add-to-cart">Añadir al carrito</button>
-            </div>
         </div>
     </section>
-
     
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <p>Dirección: Calle Falsa 123</p>
-        <p>Teléfono: 123-456-7890</p>
+    <section id="reservas">
+        <h2>Reserva tu Mesa</h2>
+        <form>
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha">
+            <label for="hora">Hora:</label>
+            <input type="time" id="hora">
+            <label for="personas">Número de personas:</label>
+            <input type="number" id="personas" min="1">
+            <button type="submit">Reservar</button>
+        </form>
     </section>
-
-    
-    <aside id="carrito">
-        <h2>Carrito de Compras</h2>
-        <ul id="cart-items"></ul>
-        <p>Total: <span id="total">$0.00</span></p>
-        <button id="vaciar-carrito">Vaciar Carrito</button>
-    </aside>
 
     <script src="js/main.js"></script>
 </body>
 </html>
+

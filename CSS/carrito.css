@@ -9,11 +9,26 @@ body {
 
 /* --- Header con imagen de fondo --- */
 .header-background {
+    position: relative;
     background: url('../Img/header.jpg') no-repeat center center/cover;
     height: 250px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.header-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Oscurece la imagen */
+}
+
+.header-background h1 {
+    position: relative; /* Para que no se vea afectado por el overlay */
 }
 
 h1 {
@@ -83,6 +98,7 @@ th, td {
     padding: 15px;
     text-align: center;
     border-bottom: 1px solid #ccc;
+    color: #E0E0E0;
 }
 
 td img {
@@ -100,16 +116,18 @@ td img {
     background-color: #84C7E0;
     color: black;
     font-size: 1.2rem;
-    padding: 10px 20px;
+    padding: 12px 24px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.2s;
 }
 
 .btn-comprar:hover {
     background-color: #5DA3C0;
+    transform: scale(1.05);
 }
+
 
 /* --- FOOTER --- */
 footer {
@@ -126,11 +144,13 @@ footer p {
 
 /* --- RESPONSIVE DESIGN --- */
 @media (max-width: 768px) {
-    .header-background h1 {
-        font-size: 2.5rem;
+    footer {
+        padding: 15px;
+        font-size: 0.9rem;
     }
-
     .carrito-container {
         width: 90%;
     }
 }
+
+    

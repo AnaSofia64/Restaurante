@@ -1,79 +1,53 @@
-/* --- RESET GENERAL --- */
-* {
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Fondo oscuro */
+    color: #E0E0E0; /* Letras en blanco */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-/* --- BODY --- */
-body {
-    background-color: #131b25;
-    color: #E0F7FA;
     text-align: center;
 }
 
-/* --- HEADER --- */
-header {
-    position: relative;
-    text-align: center;
-    color: white;
-}
-
+/* --- Header con imagen de fondo --- */
 .header-background {
-    background-image: url('../Img/header.jpg'); /* Cambia por la ruta de tu imagen */
-    background-size: cover;
-    background-position: center;
-    padding: 80px 0;
-    position: relative;
+    background: url('../Img/header.jpg') no-repeat center center/cover;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.header-background h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    position: relative;
-    z-index: 2;
+h1 {
+    font-size: 2.5rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-.header-background::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-}
-
-/* --- NAVBAR --- */
-nav {
-    background-color: #1d4950;
-    padding: 10px;
-}
-
+/* --- Menú de navegación --- */
 nav ul {
     list-style: none;
     padding: 0;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #1F1F1F;
+    padding: 15px 0;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #84C7E0;
-    font-weight: bold;
+    color: #84C7E0; /* Celeste */
     font-size: 1.2rem;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #E0F7FA;
+    color: white;
 }
+
 
 /* --- SECCIÓN DE RESERVAS --- */
 .reservas {

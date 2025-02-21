@@ -1,0 +1,134 @@
+/* --- Estilos generales --- */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #E0E0E0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* --- Header con imagen de fondo --- */
+.header-background {
+    background: url('../Img/header.jpg') no-repeat center center/cover;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* --- Menú de navegación --- */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #1F1F1F;
+    padding: 15px 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #84C7E0;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: white;
+}
+
+/* --- Contenedor del menú --- */
+.menu-container {
+    padding: 30px;
+}
+
+/* --- Sección de los platos fuertes --- */
+.menu-container h2 {
+    font-size: 2rem;
+    color: rgb(110, 106, 161);
+    margin-bottom: 20px;
+}
+
+.menu-category {
+    display: flex;
+    align-items: center;
+    background-color: #1F1F1F;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+.menu-category img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.category-info {
+    text-align: left;
+}
+
+.category-info h3 {
+    font-size: 1.5rem;
+    color: rgb(250, 249, 249);
+}
+
+.category-info p {
+    font-size: 1.1rem;
+    margin: 5px 0;
+}
+
+/* --- Botón "Agregar al Carrito" --- */
+.btn {
+    background-color: #84C7E0;
+    color: black;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #5DA3C0;
+}
+
+/* --- Botón "Volver al Menú" --- */
+.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.back-btn:hover {
+    background-color: #555;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #1F1F1F;
+    padding: 15px 0;
+    margin-top: 30px;
+}

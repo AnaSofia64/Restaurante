@@ -111,6 +111,12 @@ td img {
     background-color: #5DA3C0;
 }
 
+.cart-button-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
 .view-cart {
     background: #1c475c;
     color: white;

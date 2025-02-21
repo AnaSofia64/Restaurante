@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="./CSS/carrito.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header-background">
+            <h1>Teokbokki & Kimchi</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="menu.html">Menú</a></li>
+                <li><a href="reservas.html">Reservas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- SECCIÓN DEL CARRITO -->
+    <section class="carrito">
+        <h2>🛒 Tu Carrito</h2>
+        <div class="carrito-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Total</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="carrito-items">
+                    <!-- Aquí se llenarán los productos con JavaScript -->
+                </tbody>
+            </table>
+        </div>
+        <div class="total">
+            <h3>Total a pagar: <span id="total-pago">0.00</span> USD</h3>
+            <button class="btn-comprar">Finalizar Compra</button>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>📍 Ubicación: Calle 123, Ciudad, País</p>
+        <p>📞 Teléfono: +123 456 789</p>
+        <p>📧 Email: contacto@teokbokki.com</p>
+    </footer>
+
+    <script src="./JS/carrito.js"></script> <!-- Archivo JavaScript para manejar el carrito -->
+</body>
+</html>

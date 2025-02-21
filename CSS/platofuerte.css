@@ -125,6 +125,12 @@ nav ul li a:hover {
     background-color: #555;
 }
 
+.cart-button-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
 .view-cart {
     background: #1c475c;
     color: white;

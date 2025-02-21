@@ -2,6 +2,27 @@ document.addEventListener("DOMContentLoaded", () => {
     const botonesAgregar = document.querySelectorAll(".add-to-cart");
     const botonVerCarrito = document.querySelector(".view-cart");
 
+    if (cartItems.children.length === 0) {
+        alert('El carrito está vacío.');
+        return;
+    }
+
+    let factura = 'Factura de Compra:\n\n';
+    for (let item of cartItems.children) {
+        const producto = item.children[0].innerText;
+        const precio = item.children[1].innerText;
+        const cantidad = item.children[2].innerText;
+        const total = item.children[3].innerText;
+        factura += `Producto: ${producto}\nPrecio: ${precio}\nCantidad: ${cantidad}\nTotal: ${total}\n\n`;
+    }
+    factura += `Total a pagar: $${totalPrice}`;
+
+    alert(factura);
+
+    // Vaciar el carrito
+    cartItems.innerHTML = '';
+    document.getElementById('total-price').innerText = '0.00';
+
     // Cargar carrito desde localStorage
     let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 

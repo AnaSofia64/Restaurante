@@ -121,3 +121,23 @@ nav ul li a:hover {
 .back-btn:hover {
     background: #133357;
 }
+
+.cart-button-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.view-cart {
+    background: #1c475c;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.view-cart:hover {
+    background: #133357;
+}

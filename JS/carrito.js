@@ -1,27 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const botonesAgregar = document.querySelectorAll(".add-to-cart");
     const botonVerCarrito = document.querySelector(".view-cart");
-
-    if (cartItems.children.length === 0) {
-        alert('El carrito está vacío.');
-        return;
-    }
-
-    let factura = 'Factura de Compra:\n\n';
-    for (let item of cartItems.children) {
-        const producto = item.children[0].innerText;
-        const precio = item.children[1].innerText;
-        const cantidad = item.children[2].innerText;
-        const total = item.children[3].innerText;
-        factura += `Producto: ${producto}\nPrecio: ${precio}\nCantidad: ${cantidad}\nTotal: ${total}\n\n`;
-    }
-    factura += `Total a pagar: $${totalPrice}`;
-
-    alert(factura);
-
-    // Vaciar el carrito
-    cartItems.innerHTML = '';
-    document.getElementById('total-price').innerText = '0.00';
+    const botonHacerCompra = document.getElementById("hacer-compra");
 
     // Cargar carrito desde localStorage
     let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
@@ -55,6 +35,24 @@ document.addEventListener("DOMContentLoaded", () => {
     if (botonVerCarrito) {
         botonVerCarrito.addEventListener("click", () => {
             window.location.href = "carrito.html";
+        });
+    }
+
+    // Procesar la compra al hacer clic en "Hacer Compra"
+    if (botonHacerCompra) {
+        botonHacerCompra.addEventListener("click", () => {
+            if (carrito.length === 0) {
+                alert("El carrito está vacío. Agrega productos antes de hacer la compra.");
+                return;
+            }
+
+            // Aquí puedes agregar la lógica para procesar la compra, por ejemplo, enviar los datos a un servidor
+            alert("Compra realizada con éxito. ¡Gracias por tu compra!");
+
+            // Vaciar el carrito después de la compra
+            carrito = [];
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+            window.location.href = "PaginaPrincipal.html"; // Redirigir a la página principal o a una página de confirmación
         });
     }
 });

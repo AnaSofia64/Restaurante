@@ -1,3 +1,4 @@
+
 body {
     font-family: Arial, sans-serif;
     background-color: #121212;
@@ -7,7 +8,7 @@ body {
     text-align: center;
 }
 
-/* --- Header con imagen de fondo --- */
+
 .header-background {
     background: url('../Img/header.jpg') no-repeat center center/cover;
     height: 250px;
@@ -22,7 +23,7 @@ h1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-/* --- Menú de navegación --- */
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -48,21 +49,23 @@ nav ul li a:hover {
     color: white;
 }
 
-/* --- Contenedor del menú --- */
+
 .menu-container {
     padding: 30px;
 }
 
-/* --- Sección de los platos fuertes --- */
+
 .menu-container h2 {
     font-size: 2rem;
-    color: rgb(110, 106, 161);
+    color: white;
     margin-bottom: 20px;
 }
+
 
 .menu-category {
     display: flex;
     align-items: center;
+    justify-content: start; 
     background-color: #1F1F1F;
     padding: 20px;
     margin: 20px auto;
@@ -71,20 +74,23 @@ nav ul li a:hover {
     box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
 }
 
+
 .menu-category img {
     width: 200px;
     height: 150px;
     border-radius: 10px;
-    margin-right: 20px;
+    margin-right: 30px; 
 }
 
 .category-info {
     text-align: left;
+    flex: 1; 
 }
+
 
 .category-info h3 {
     font-size: 1.5rem;
-    color: rgb(250, 249, 249);
+    color: white;
 }
 
 .category-info p {
@@ -92,17 +98,20 @@ nav ul li a:hover {
     margin: 5px 0;
 }
 
-/* --- Botón "Agregar al Carrito" --- */
+
 .btn {
     background-color: #84C7E0;
     color: black;
-    padding: 10px 15px;
+    padding: 10px 20px;
     font-size: 1rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s;
+    display: inline-block; 
+    margin-top: 10px; 
 }
+
 
 .btn:hover {
     background-color: #5DA3C0;
@@ -125,29 +134,10 @@ nav ul li a:hover {
     background-color: #555;
 }
 
-.cart-button-container {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-}
-
-.view-cart {
-    background: #1c475c;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.view-cart:hover {
-    background: #133357;
-}
-
 /* --- Footer --- */
 footer {
     background-color: #1F1F1F;
     padding: 15px 0;
     margin-top: 30px;
 }
+

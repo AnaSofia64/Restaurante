@@ -113,7 +113,7 @@ nav ul li a:hover {
     margin: 40px 10%;
     padding: 20px;
     background: url('../Img/about-us.jpg') no-repeat center center/cover;
-    color: white;
+    color: rgb(25, 14, 73);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }

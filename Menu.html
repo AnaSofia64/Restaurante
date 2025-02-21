@@ -3,54 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú del Restaurante</title>
-    <link rel="stylesheet" href="Style.css">
+    <title>Menú | Teokbokki & Kimchi</title>
+    <link rel="stylesheet" href="./CSS/Menustyle.css">
 </head>
 <body>
+
     <header>
-        <h1>Nombre del Restaurante</h1>
+        <div class="header-background">
+            <h1>Teokbokki & Kimchi</h1>
+        </div>
         <nav>
             <ul>
+                <li><a href="index.html">Inicio</a></li>
                 <li><a href="menu.html">Menú</a></li>
-                <li><a href="cart.html">Carrito</a></li>
-                <li><a href="#reservas">Reservas</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+                <li><a href="reservas.html">Reservas</a></li>
             </ul>
         </nav>
     </header>
-    
-    <section id="menu">
-        <h2>Nuestro Menú</h2>
-        <nav>
-            <button class="category-btn">Entradas</button>
-            <button class="category-btn">Platos Fuertes</button>
-            <button class="category-btn">Postres</button>
-            <button class="category-btn">Bebidas</button>
-        </nav>
-        <div class="menu-container">
-            <div class="menu-item">
-                <img src="img/plato1.jpg" alt="Plato 1">
-                <h3>Plato 1</h3>
-                <p>Descripción del plato.</p>
-                <span>$10.00</span>
-                <button class="add-to-cart">Añadir al carrito</button>
-            </div>
-        </div>
-    </section>
-    
-    <section id="reservas">
-        <h2>Reserva tu Mesa</h2>
-        <form>
-            <label for="fecha">Fecha:</label>
-            <input type="date" id="fecha">
-            <label for="hora">Hora:</label>
-            <input type="time" id="hora">
-            <label for="personas">Número de personas:</label>
-            <input type="number" id="personas" min="1">
-            <button type="submit">Reservar</button>
-        </form>
-    </section>
 
-    <script src="js/main.js"></script>
+    <main class="menu-container">
+        <h2>Nuestro Menú</h2>
+
+        <section class="menu-category">
+            <img src="./Img/entradas.jpg" alt="Entradas">
+            <div class="category-info">
+                <h3>Entradas</h3>
+                <p>Deliciosas entradas tradicionales coreanas como Kimchi, Mandu y más.</p>
+                <a href="entradas.html" class="btn">Ver Entradas</a>
+            </div>
+        </section>
+
+        <section class="menu-category">
+            <img src="./Img/platos_fuertes.jpg" alt="Platos Fuertes">
+            <div class="category-info">
+                <h3>Platos Fuertes</h3>
+                <p>Disfruta de auténticos platos coreanos como Bibimbap y Bulgogi.</p>
+                <a href="platos_fuertes.html" class="btn">Ver Platos Fuertes</a>
+            </div>
+        </section>
+
+        <section class="menu-category">
+            <img src="./Img/postres.jpg" alt="Postres">
+            <div class="category-info">
+                <h3>Postres</h3>
+                <p>Postres dulces y tradicionales como Hotteok y Bingsu.</p>
+                <a href="postres.html" class="btn">Ver Postres</a>
+            </div>
+        </section>
+
+        <section class="menu-category">
+            <img src="./Img/bebidas.jpg" alt="Bebidas">
+            <div class="category-info">
+                <h3>Bebidas</h3>
+                <p>Explora nuestra selección de tés, soju y refrescos coreanos.</p>
+                <a href="bebidas.html" class="btn">Ver Bebidas</a>
+            </div>
+        </section>
+
+        <a href="index.html" class="back-btn">⬅ Volver al Inicio</a>
+    </main>
+
+    <footer>
+        <p>📍 Ubicación: Calle 123, Ciudad, País</p>
+        <p>📞 Teléfono: +123 456 789</p>
+        <p>📧 Email: contacto@teokbokki.com</p>
+    </footer>
+
 </body>
 </html>
-

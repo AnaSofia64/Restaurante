@@ -16,7 +16,7 @@ header {
 .header-background h1 {
     font-size: 2.5rem;
     margin: 10px 0;
-    color: #ffcc00;
+    color: white;
 }
 
 nav ul {
@@ -38,7 +38,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ffcc00;
+    color: white;
 }
 
 /* --- CENTRAR EL TÍTULO "Nuestras Bebidas" --- */
@@ -115,7 +115,7 @@ nav ul li a:hover {
 }
 
 .btn:hover {
-    background-color: #ffcc00;
+    background-color: #5DA3C0;
     color: black;
 }
 
@@ -130,7 +130,7 @@ nav ul li a:hover {
 }
 
 .back-btn:hover {
-    color: #ffcc00;
+    color: #555;
 }
 
 
@@ -141,7 +141,7 @@ nav ul li a:hover {
 }
 
 .view-cart {
-    background-color: #ffcc00;
+    background-color: #84C7E0;
     color: black;
     padding: 10px 20px;
     font-size: 1.2rem;

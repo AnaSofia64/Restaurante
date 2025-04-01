@@ -95,6 +95,17 @@ th {
     background-color: darkred;
 }
 
+#hacer-compra {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+#hacer-compra:hover {
+    background-color: darkred;
+}
+
 .back-btn {
     display: inline-block;
     margin-top: 10px;

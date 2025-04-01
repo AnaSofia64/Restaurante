@@ -128,6 +128,24 @@ nav ul li a:hover {
     font-weight: bold;
 }
 
+.Collaborations{
+    margin: 95px ;
+    padding: 15px;
+    width: 85vw;
+    color: rgb(25, 14, 73);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.about h2 {
+    font-size: 28px;
+}
+
+.about p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
 /* Botón del carrito */
 .cart-button-container {
     position: fixed;

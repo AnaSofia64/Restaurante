@@ -52,7 +52,6 @@ nav ul li a:hover {
 /* --- SECCIÓN DE POSTRES --- */
 .menu-container {
     padding: 30px;
-    text-align: center;
 }
 
 .menu-container h2 {
@@ -64,7 +63,6 @@ nav ul li a:hover {
 /* --- Cuadrícula de postres --- */
 .desserts-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     justify-items: center;
     padding: 20px;
@@ -72,8 +70,9 @@ nav ul li a:hover {
 
 .dessert-item {
     background-color: #1F1F1F;
-    padding: 15px;
-    width: 90%;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
     max-width: 250px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);

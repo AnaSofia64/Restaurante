@@ -27,7 +27,7 @@ function renderMenu(items) {
         const categoria = item.Categoria?.toLowerCase().trim(); // ejemplo: "Entrada"
         const nombre = item.Nombre?.trim();
         const precio = parseFloat(item.Precio);
-        const descripcion = item["Descripción"]?.trim();
+        const descripcion = item.Descripcion?.trim();
         const imagen = item.Imagen || "placeholder.jpg";
 
         // Mapea la categoría al data-category del HTML

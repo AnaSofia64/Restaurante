@@ -98,7 +98,7 @@ nav ul li a:hover {
     object-fit: cover;     
     border-radius: 10px;   
     display: block;
-    margin: 0 auto;        
+    margin: 20px auto;        
 }
 
 .btn {

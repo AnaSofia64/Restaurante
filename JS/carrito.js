@@ -82,7 +82,7 @@ function enviarPedido() {
     // Si los campos no existen, redirigir a la página de pedido
     if (!nombreInput || !telefonoInput || !direccionInput) {
         console.warn("Campos de cliente no encontrados. Redirigiendo a página de pedido...");
-        window.location.href = "Pedido.html";
+        window.location.href = "Pedidos.html";
         return;
     }
 
@@ -124,7 +124,7 @@ function enviarPedido() {
             document.getElementById("cart-items").innerHTML = "";
             document.getElementById("total-price").textContent = "0.00";
 
-            setTimeout(() => window.location.href = "Pedido.html", 2000);
+            setTimeout(() => window.location.href = "Pedidos.html", 2000);
         }
     })
     .catch(error => {

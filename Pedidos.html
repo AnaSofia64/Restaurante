@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas - Teokbokki & Kimchi</title>
+    <link rel="stylesheet" href="./CSS/Reservas.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-background">
+            <h1>Teokbokki & Kimchi</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Menuc.html">Menú</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+  
+    <section class="reservas">
+        <h2>Reserva tu mesa</h2>
+        <p>Disfruta de una experiencia gastronómica inolvidable en nuestro restaurante. Completa el formulario para reservar tu mesa.</p>
+        
+        <form method="get" action="index.html">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha" required>
+
+            <label for="hora">Hora:</label>
+            <input type="time" id="hora" name="hora" required>
+
+            <label for="personas">Número de personas:</label>
+            <select id="personas" name="personas">
+                <option value="1">1 persona</option>
+                <option value="2">2 personas</option>
+                <option value="3">3 personas</option>
+                <option value="4">4 personas</option>
+                <option value="5">5 personas</option>
+                <option value="6+">6 o más</option>
+            </select>
+
+            <button type="submit" class="btn-reservar">Reservar Ahora</button>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>📍 Ubicación: cra 14 #112-97, Usaquen,  Bogotá</p>
+        <p>📞 Teléfono: +57 312 345 6789</p>
+        <p>📧 Email: contacto@teokbokki&kimchi.com</p>
+    </footer>
+
+</body>
+</html>
+

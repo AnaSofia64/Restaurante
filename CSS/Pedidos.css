@@ -145,6 +145,25 @@ nav ul li a:hover {
     background-color: #5DA3C0;
 }
 
+.cart-button-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.view-cart {
+    background: #0d2531;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.view-cart:hover {
+    background: #091f38;
+}
 
 /* --- FOOTER --- */
 footer {

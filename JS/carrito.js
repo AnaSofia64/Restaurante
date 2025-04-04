@@ -4,13 +4,28 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("hacer-compra").addEventListener("click", enviarPedido);
 });
 
+function addToCart(nombre, precio) {
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+    // Ver si ya existe
+    const index = carrito.findIndex(item => item.nombre === nombre);
+    if (index !== -1) {
+        carrito[index].cantidad += 1;
+    } else {
+        carrito.push({ nombre, precio, cantidad: 1 });
+    }
+
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    alert(`${nombre} agregado al carrito`);
+}
+
 // 📌 Mostrar productos del carrito
 function mostrarCarrito() {
     let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
     let tablaCarrito = document.getElementById("cart-items");
     let totalPrecio = 0;
 
-    tablaCarrito.innerHTML = ""; // Limpiar tabla
+    tablaCarrito.innerHTML = "";
 
     carrito.forEach((item, index) => {
         let fila = document.createElement("tr");
@@ -32,7 +47,6 @@ function mostrarCarrito() {
 
     document.getElementById("total-price").textContent = totalPrecio.toFixed(2);
 
-    // Eventos para actualizar o eliminar
     document.querySelectorAll(".cantidad-input").forEach(input => {
         input.addEventListener("change", actualizarCantidad);
     });
@@ -73,16 +87,14 @@ function vaciarCarrito() {
     mostrarCarrito();
 }
 
-// 📌 Enviar pedido o redirigir a formulario
+// 📌 Enviar pedido
 function enviarPedido() {
     const nombreInput = document.getElementById("nombre");
     const telefonoInput = document.getElementById("telefono");
     const direccionInput = document.getElementById("direccion");
 
-    // Si los campos no existen, redirigir a la página de pedido
     if (!nombreInput || !telefonoInput || !direccionInput) {
-        console.warn("Campos de cliente no encontrados. Redirigiendo a página de pedido...");
-        window.location.href = "Pedidos.html";
+        console.warn("Campos de cliente no encontrados.");
         return;
     }
 
@@ -102,30 +114,26 @@ function enviarPedido() {
         return;
     }
 
+    const valorPedido = carrito.reduce((sum, item) => sum + item.precio * item.cantidad, 0);
+
     const pedido = {
-        nombre,
-        telefono,
-        direccion,
-        pedido: carrito,
-        total: carrito.reduce((sum, item) => sum + item.precio * item.cantidad, 0)
+        Nombre: nombre,
+        Telefono: telefono,
+        Dirección: direccion,
+        Pedido: carrito.map(item => `${item.nombre} x${item.cantidad}`).join(", "),
+        "Valor del pedido": valorPedido.toFixed(2)
     };
 
-    fetch("TU_URL_DEL_GOOGLE_APPS_SCRIPT", {
+    fetch("https://script.google.com/macros/s/AKfycbxoVAfSVZZkLi1P6Y7zr2aVZyOGE_Qemh77w2PimIGmEGUHw2_bev9XlX5IWHD38yX2bQ/exec?sheet=Pedidos", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(pedido)
     })
-    .then(response => response.json())
-    .then(data => {
-        if (data.result === "success") {
-            mostrarModal("✅ Pedido Exitoso", "Tu pedido ha sido enviado con éxito.");
-
-            localStorage.removeItem("carrito");
-            document.getElementById("cart-items").innerHTML = "";
-            document.getElementById("total-price").textContent = "0.00";
-
-            setTimeout(() => window.location.href = "Pedidos.html", 2000);
-        }
+    .then(() => {
+        mostrarModal("✅ Pedido Exitoso", "Tu pedido ha sido enviado con éxito.");
+        localStorage.removeItem("carrito");
+        document.getElementById("cart-items").innerHTML = "";
+        document.getElementById("total-price").textContent = "0.00";
     })
     .catch(error => {
         console.error("Error al enviar pedido:", error);
@@ -133,14 +141,13 @@ function enviarPedido() {
     });
 }
 
-// 📌 Modal para mostrar mensajes
+// 📌 Modal
 function mostrarModal(titulo, mensaje) {
     document.getElementById("modal-titulo").textContent = titulo;
     document.getElementById("modal-texto").textContent = mensaje;
     document.getElementById("modal-mensaje").style.display = "flex";
 }
 
-// 📌 Cerrar modal
 function cerrarModal() {
     document.getElementById("modal-mensaje").style.display = "none";
 }

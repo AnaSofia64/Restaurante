@@ -2,10 +2,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const carritoTabla = document.getElementById("cart-items");
     const totalPrecio = document.getElementById("total-price");
     const botonVaciar = document.getElementById("vaciar-carrito");
+    const botonCompra = document.getElementById("hacer-compra");
 
     let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-    // Función para mostrar los productos en la tabla
     function actualizarCarrito() {
         carritoTabla.innerHTML = "";
         let total = 0;
@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
         totalPrecio.textContent = total.toFixed(2);
     }
 
-    // Eliminar un producto del carrito
     carritoTabla.addEventListener("click", (e) => {
         if (e.target.classList.contains("eliminar-item")) {
             let index = e.target.getAttribute("data-index");
@@ -36,11 +35,19 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Vaciar todo el carrito
     botonVaciar.addEventListener("click", () => {
         carrito = [];
         localStorage.setItem("carrito", JSON.stringify(carrito));
         actualizarCarrito();
+    });
+
+    botonCompra.addEventListener("click", () => {
+        if (carrito.length === 0) {
+            mostrarModal("⚠️ Carrito Vacío", "No hay productos en el carrito.");
+            return;
+        }
+
+        window.location.href = "Pedidos.html";
     });
 
     actualizarCarrito();

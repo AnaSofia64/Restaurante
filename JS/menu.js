@@ -57,10 +57,3 @@ function renderMenu(items) {
     });
 }
 
-// Función de carrito (puedes moverla a carrito.js si lo prefieres)
-function addToCart(name, price) {
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    cart.push({ name, price });
-    localStorage.setItem("cart", JSON.stringify(cart));
-    alert(`${name} agregado al carrito`);
-}

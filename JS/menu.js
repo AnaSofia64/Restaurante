@@ -9,7 +9,7 @@ async function fetchMenu() {
     try {
         const response = await fetch("https://script.google.com/macros/s/AKfycbxoVAfSVZZkLi1P6Y7zr2aVZyOGE_Qemh77w2PimIGmEGUHw2_bev9XlX5IWHD38yX2bQ/exec?sheet= Menu");
         
-        if (!response.ok) throw new Error(Error HTTP: ${response.status});
+        if (!response.ok) throw new Error(`Error HTTP: ${response.status}`);
         
         const data = await response.json();
         renderMenu(data.data);
@@ -39,7 +39,7 @@ function renderMenu(items) {
         section.id = category;
 
         const title = document.createElement("h2");
-        title.textContent = 🍽️ ${category};
+        title.textContent = `🍽️ ${category}`;
         section.appendChild(title);
 
         categories[category].forEach((item) => {
@@ -61,7 +61,7 @@ function renderMenu(items) {
 
             const price = document.createElement("p");
             price.className = "menu-price";
-            price.textContent = $${parseFloat(item["Precio "]).toFixed(2)}; // Corregido el acceso a la clave con espacio
+            price.textContent = `$${parseFloat(item["Precio "]).toFixed(2)}`; // Corregido el acceso a la clave con espacio
 
             const btn = document.createElement("button");
             btn.textContent = "Agregar al Carrito";

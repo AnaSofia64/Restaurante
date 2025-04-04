@@ -5,6 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teokbokki & Kimchi</title>
     <link rel="stylesheet" href="./CSS/Paginaprincipal.css">
+    <style>
+        /* Puedes agregar este bloque al CSS principal si quieres mantener la consistencia */
+        .collaborators-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        .collaborator {
+            text-align: center;
+        }
+        .collaborator img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -37,9 +57,18 @@
 
     <section class="Collaboration">
         <h2>Colaboradores</h2>
-        <p>Ana Sofia Rodriguez & Juan Camilo Morales</p>
+        <div class="collaborators-container">
+            <div class="collaborator">
+                <img src="./Img/Ana Rodriguez.jpeg" alt="Ana Rodriguez">
+                <p>Ana Sofia Rodriguez</p>
+            </div>
+            <div class="collaborator">
+                <img src="./Img/Juan Morales.jpeg" alt="Juan Morales">
+                <p>Juan Camilo Morales</p>
+            </div>
+        </div>
     </section>
-     
+    
     <div class="cart-button-container">
         <button class="view-cart" onclick="window.location.href='carrito.html'">🛒 Ver Carrito</button>
     </div>

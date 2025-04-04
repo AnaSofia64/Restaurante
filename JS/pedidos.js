@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         try {
-            let respuesta = await fetch("https://script.google.com/macros/s/AKfycbyPOOnPfOflIV7WYqm-N9OkLjsx6QwY-FrtX8vm1dFvPPkRZKbfKtYuvSHdFKL8CpjUfw/exec", {
+            let respuesta = await fetch("https://script.google.com/macros/s/AKfycbyPOOnPfOflIV7WYqm-N9OkLjsx6QwY-FrtX8vm1dFvPPkRZKbfKtYuvSHdFKL8CpjUfw/exec?sheet=Menu", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(pedido)

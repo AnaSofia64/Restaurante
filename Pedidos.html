@@ -21,38 +21,31 @@
         </nav>
     </header>
 
-  
-    <section class="reservas">
-        <h2>Reserva tu mesa</h2>
-        <p>Disfruta de una experiencia gastronómica inolvidable en nuestro restaurante. Completa el formulario para reservar tu mesa.</p>
-        
-        <form method="get" action="index.html">
+    <section class="Pedidos">
+        <h2>Realiza tu Pedido</h2>
+        <p>Disfruta de una experiencia gastronómica inolvidable desde tu casa.</p>
+    
+        <form id="formPedido">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required>
-
-            <label for="email">Correo Electrónico:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="fecha">Fecha:</label>
-            <input type="date" id="fecha" name="fecha" required>
-
-            <label for="hora">Hora:</label>
-            <input type="time" id="hora" name="hora" required>
-
-            <label for="personas">Número de personas:</label>
-            <select id="personas" name="personas">
-                <option value="1">1 persona</option>
-                <option value="2">2 personas</option>
-                <option value="3">3 personas</option>
-                <option value="4">4 personas</option>
-                <option value="5">5 personas</option>
-                <option value="6+">6 o más</option>
-            </select>
-
-            <button type="submit" class="btn-reservar">Reservar Ahora</button>
+    
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+    
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" required>
+    
+            <h3>Pedido:</h3>
+            <ul id="listaPedido"></ul> <!-- Aquí se mostrarán los productos -->
+    
+            <p><strong>Total del Pedido:</strong> $<span id="totalPedido">0.00</span></p>
+            <p><strong>Costo de Envío:</strong> $5.00</p>
+            <p><strong>Total a Pagar:</strong> $<span id="totalConEnvio">5.00</span></p>
+    
+            <button type="submit" class="btn-reservar">Realizar Pedido</button>
         </form>
     </section>
-
+     
     <!-- FOOTER -->
     <footer>
         <p>📍 Ubicación: cra 14 #112-97, Usaquen,  Bogotá</p>

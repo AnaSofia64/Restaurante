@@ -16,46 +16,33 @@
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="Menuc.html">Menú</a></li>
                 <li><a href="carrito.html">Carrito</a></li>
-                <li><a href="Reservas.html">Reservas</a></li>
+                <li><a href="Pedidos.html">Reservas</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="menu-container">
-        <h2>Entradas</h2>
-
-        <div class="menu-category">
-            <img src="./Img/Gyozas.jpg" alt="Gyozas">
-            <div class="category-info">
-                <h3>Gyozas</h3>
-                <p>Repollo fermentado con especias coreanas.</p>
-                <p class="price" data-price="5.00">$5.00</p>
-                <button class="btn add-to-cart" data-name="Gyozas" data-price="5.00">Agregar al Carrito</button>
-            </div>
-        </div>
-
-        <div class="menu-category">
-            <img src="./Img/Spring-Rolls.jpg" alt="Spring-Rolls">
-            <div class="category-info">
-                <h3>Spring-Rolls</h3>
-                <p>Pasteles de arroz en salsa picante.</p>
-                <p class="price" data-price="5.50">$5.50</p>
-                <button class="btn add-to-cart" data-name="Spring-Rolls" data-price="5.50">Agregar al Carrito</button>
-            </div>
-        </div>
-
-        <div class="menu-category">
-            <img src="./Img/philadelfia roll.jpg" alt="philadelfia roll">
-            <div class="category-info">
-                <h3>philadelfia roll</h3>
-                <p>Dumplings coreanos rellenos de carne y vegetales.</p>
-                <p class="price" data-price="7.50">$7.50</p>
-                <button class="btn add-to-cart" data-name="philadelfia roll" data-price="7.50">Agregar al Carrito</button>
-            </div>
-        </div>
-
-        <a href="Menuc.html" class="back-btn">⬅ Volver al Menú</a>
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entradas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Entradas</h1>
+    </header>
+    
+    <section id="menu-items" data-category="entrada">
+        <!-- Aquí se insertarán los elementos dinámicamente -->
     </section>
+
+    <script src="menu.js"></script>
+    <script src="carrito.js"></script>
+
+    <a href="Menuc.html" class="back-btn">⬅ Volver al Menú</a>
+
 
     <div class="cart-button-container">
         <button class="view-cart" onclick="window.location.href='carrito.html'">🛒 Ver Carrito</button>

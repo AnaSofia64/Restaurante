@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú del Restaurante</title>
+    <title>Menú | Teokbokki & Kimchi</title>
     <link rel="stylesheet" href="./CSS/Menustyle.css">
 </head>
 <body>
-
     <header>
         <div class="header-background">
             <h1>Teokbokki & Kimchi</h1>
@@ -15,63 +14,49 @@
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
+                <li><a href="Menuc.html">Menú</a></li>
                 <li><a href="carrito.html">Carrito</a></li>
-                <li><a href="Reservas.html">Reservas</a></li>
+                <li><a href="Pedidos.html">Pedidos</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="menu-container">
-        <h2>Nuestro Menú</h2>
+    <h2>Menú</h2>
+    <section id="menu">
+        <div class="categoria" id="entradas">
+            <h3>Entradas</h3>
+            <div class="menu-items" data-category="entrada"></div>
+        </div>
 
-        <section class="menu-category">
-            <img src="./Img/entradas.jpg" alt="Entradas">
-            <div class="category-info">
-                <h3>Entradas</h3>
-                <p>Deliciosas entradas tradicionales coreanas como Kimchi, Mandu y más.</p>
-                <a href="entradas.html" class="btn">Ver Entradas</a>
-            </div>
-        </section>
+        <div class="categoria" id="platos-fuertes">
+            <h3>Platos Fuertes</h3>
+            <div class="menu-items" data-category="plato-fuerte"></div>
+        </div>
 
-        <section class="menu-category">
-            <img src="./Img/plato fuerte.jpg" alt="Platos Fuertes">
-            <div class="category-info">
-                <h3>Platos Fuertes</h3>
-                <p>Disfruta de auténticos platos coreanos como Bibimbap y Bulgogi.</p>
-                <a href="Platos fuertes.html" class="btn">Ver Platos Fuertes</a>
-            </div>
-        </section>
+        <div class="categoria" id="postres">
+            <h3>Postres</h3>
+            <div class="menu-items" data-category="postre"></div>
+        </div>
 
-        <section class="menu-category">
-            <img src="./Img/postres.jpg" alt="Postres">
-            <div class="category-info">
-                <h3>Postres</h3>
-                <p>Postres dulces y tradicionales como Hotteok y Bingsu.</p>
-                <a href="postres.html" class="btn">Ver Postres</a>
-            </div>
-        </section>
+        <div class="categoria" id="bebidas">
+            <h3>Bebidas</h3>
+            <div class="menu-items" data-category="bebida"></div>
+        </div>
+    </section>
 
-        <section class="menu-category">
-            <img src="./Img/bebidas.jpg" alt="Bebidas">
-            <div class="category-info">
-                <h3>Bebidas</h3>
-                <p>Explora nuestra selección de tés, soju y refrescos coreanos.</p>
-                <a href="bebidas.html" class="btn">Ver Bebidas</a>
-            </div>
-        </section>
-
-        <a href="PaginaPrincipal.html" class="back-btn">⬅ Volver al Inicio</a>
-    </main>
+    <a href="Menuc.html" class="back-btn">⬅ Volver al Menú</a>
 
     <div class="cart-button-container">
         <button class="view-cart" onclick="window.location.href='carrito.html'">🛒 Ver Carrito</button>
     </div>
 
     <footer>
-        <p>📍 Ubicación: cra 14 #112-97, Usaquen,  Bogotá</p>
+        <p>📍 Ubicación: cra 14 #112-97, Usaquen, Bogotá</p>
         <p>📞 Teléfono: +57 312 345 6789</p>
         <p>📧 Email: contacto@teokbokki&kimchi.com</p>
     </footer>
 
+    <script src="menu.js"></script>
+    <script src="carrito.js"></script>
 </body>
 </html>

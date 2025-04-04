@@ -56,3 +56,56 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+document.getElementById("enviar-pedido").addEventListener("click", function () {
+    const nombre = document.getElementById("nombre").value.trim();
+    const telefono = document.getElementById("telefono").value.trim();
+    const direccion = document.getElementById("direccion").value.trim();
+
+    if (!nombre || !telefono || !direccion) {
+        alert("Por favor, complete todos los campos del cliente.");
+        return;
+    }
+
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+    if (carrito.length === 0) {
+        alert("El carrito está vacío.");
+        return;
+    }
+
+    const productos = carrito.map((item, index) => ({
+        id: index + 1, // Asegúrate de cambiar esto por el ID real si está disponible
+        precio: item.precio,
+        cantidad: item.cantidad
+    }));
+
+    const total = carrito.reduce((sum, item) => sum + item.precio * item.cantidad, 0);
+
+    const pedido = {
+        nombre,
+        telefono,
+        direccion,
+        productos,
+        total
+    };
+
+    fetch("https://tu-api.com/pedidos/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(pedido)
+    })
+    .then(response => {
+        if (!response.ok) throw new Error("Error en la respuesta");
+        return response.json();
+    })
+    .then(data => {
+        alert("¡Pedido enviado con éxito!");
+        localStorage.removeItem("carrito");
+        location.reload();
+    })
+    .catch(error => {
+        console.error("Error al enviar pedido:", error);
+        alert("Hubo un problema al enviar tu pedido.");
+    });
+});

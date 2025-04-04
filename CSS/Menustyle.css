@@ -92,6 +92,23 @@ nav ul li a:hover {
     font-size: 16px;
     color: #a8c2d8;
 }
+.menu-item {
+    background-color: #0e1533;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin: 15px;
+    text-align: center;
+    width: 240px;
+    display: inline-block;
+    vertical-align: top;
+    transition: transform 0.2s ease;
+}
+
+.menu-item:hover {
+    transform: scale(1.03);
+}
+
 .menu-image {
     width: 200px;          
     height: 200px;
@@ -100,7 +117,40 @@ nav ul li a:hover {
     display: block;
     margin: 20px auto;        
 }
+.menu-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
 
+.menu-description {
+    font-size: 14px;
+    color: #fffcfc;
+    margin-bottom: 10px;
+}
+
+.menu-price {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+
+.menu-item button {
+    background-color: #007bff; /* azul */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.menu-item button:hover {
+    background-color: #011d79; 
+}
 .btn {
     display: inline-block;
     margin-top: 10px;

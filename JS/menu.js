@@ -6,7 +6,7 @@ async function fetchMenu() {
     try {
         const response = await fetch("https://script.googleusercontent.com/macros/echo?user_content_key=AehSKLi9Dj5IvkxpcLM8zX2crbzttt5Wcqv3bXO8ng91iNFRKDKvbf7u-kdif_1Sxt5HvD4oLavhPkH0zTHavhawgRJ6jbGicakmQH8IKmt1jqAc02TkeikbO0RGntvAN5MNYe-IOZiWswiNAmC16olMBsA0xKeFQmjEoJoHXs5wQ69HektYs2JqroBkfdXkUfzhx9bSS1M02a-SvS9pwnS8zqqv-OO-Y1wr7lY7mBRKg_TuX82XAHVTzzD-YwGUCG79hgkJgWH7TI4nnB0hqIfvSWee1Q3psg5irOb2Ik9REE4e8pYeSxM&lib=MrKbA4NRqFMdJIit5cDsRHAtV4n4glF8-");
 
-        if (!response.ok) throw new Error(⁠ Error HTTP: ${response.status} ⁠);
+        if (!response.ok) throw new Error(`Error HTTP: ${response.status}`);
 
         const data = await response.json();
 
@@ -38,7 +38,7 @@ function renderMenu(items) {
         else if (categoria.includes("bebida")) categoriaId = "bebida";
         else return; // Si no se reconoce, no lo muestra
 
-        const container = document.querySelector(⁠ .menu-items[data-category="${categoriaId}"] ⁠);
+        const container = document.querySelector(`.menu-items[data-category="${categoriaId}"]`);
         if (!container) return;
 
         // Crear la tarjeta del producto
@@ -62,5 +62,5 @@ function addToCart(name, price) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     cart.push({ name, price });
     localStorage.setItem("cart", JSON.stringify(cart));
-    alert(⁠ ${name} agregado al carrito ⁠);
+    alert(`${name} agregado al carrito`);
 }

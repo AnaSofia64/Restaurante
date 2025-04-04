@@ -71,8 +71,8 @@ nav ul li a:hover {
 }
 
 .menu-category img {
-    width: 200px;
-    height: 150px;
+    width: 80px;
+    height: 80px;
     border-radius: 8px;
     margin-right: 20px;
     object-fit: cover;
@@ -91,6 +91,14 @@ nav ul li a:hover {
 .category-info p {
     font-size: 16px;
     color: #a8c2d8;
+}
+.menu-image {
+    width: 200px;          
+    height: 200px;
+    object-fit: cover;     
+    border-radius: 10px;   
+    display: block;
+    margin: 0 auto;        
 }
 
 .btn {
